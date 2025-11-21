@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <style>
+        /*리셋용 = 본격 사용할 적에는 외부 소스 링크로 사용*/
+        /* *{margin:0; padding:0; box-sizing:border-box;} */
+
+        body{
+            background-color: blanchedalmond;
+            position: relative;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        header h1{
+            text-align: center;
+            margin: 2rem auto;
+            font-size: 4rem;
+            font-weight: 800;
+        }
+        section h2{
+            text-align: center;
+            margin: 2rem auto;
+        }
+        ul{
+            /*list-style-type:none; padding: 0;*/
+            text-align: center;
+        }
+        .keyword-box{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .gradient-bar{
+            width: 60vw;
+            height: 3rem;
+            background: #000046;  /* fallback for old browsers */
+            background: linear-gradient(to right, #1CB5E0, #000046);
+            margin: 0 auto;
+        }
+        .img-grid{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap; /*플루이드 웹 : 툭툭 떨궈지게*/
+        }
+        .like-list{
+            width: 200px;
+            text-align: center;
+        }
+        .like-list img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: all .5s;
+            filter: grayscale(100%);
+        }
+        .like-list img:hover{
+            filter: grayscale(0%);
+            box-shadow: 0 8px 10px #00004650;
+            transform: scale(1.2);
+        }
+        /* Contact */
+        footer{
+        margin-top:60px;
+        background:#000;
+        padding:30px 0;
+        color:#fff;
+        }
+        footer ul{display:flex; justify-content:center; gap:40px;}
+
+        /*반응형 만들기*/
+
+    @media screen and (max-width:480px){ /*모바일 최대폭 까지는*/
+        .img-grid{
+            flex-direction: column;
+            align-items: center;
+        }
+        .like-list{width: 100%;}
+    }
+
+    @media screen and (min-width:481px) and (max-width:1023px){ /*태블릿의 경우에 481px부터 ~ 1023px 까지는*/
+        .like-list{
+            width: 45%;
+        }
+    }
+
+    @media screen and (min-width:1024px){ /*PC의 경우에 1024px 부터는*/
+        .like-list{
+            width: 20%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Noguri</h1>
+    </header>
+        <section>
+            <h2>My Keyword</h2>
+              <ul class="keyword-box">
+                <li class="keyword-list">👨</li>
+                <li class="keyword-list">🧒</li>
+                <li class="keyword-list">👨‍🦰</li>
+                <li class="keyword-list">👨‍🦲</li>
+              </ul>
+        </section>
+        <section>
+            <h2>My Color</h2>
+              <div class="gradient-bar"></div>
+        </section>
+        <section>
+            <h2>My Hobby</h2>
+              <ul class="img-grid">
+                <li class="like-list"><img src="./lemon-posset.jpg" alt="책읽기">책읽기</li>
+                <li class="like-list"><img src="./lemon-posset.jpg" alt="카페인수혈">커피마시기</li>
+                <li class="like-list"><img src="./lemon-posset.jpg" alt="꿈의나라로">여행</li>
+                <li class="like-list"><img src="./lemon-posset.jpg" alt="전파...">모니터쳐다보기</li>  
+              </ul>
+        </section>
+        <section>
+            <h2>My Food</h2>
+              <ul class="img-grid">
+                <li class="like-list"><img src="./녹차.png" alt=" ">에그타르트</li>
+                <li class="like-list"><img src="./녹차.png" alt=" ">소금빵</li>
+                <li class="like-list"><img src="./녹차.png" alt=" ">패스츄리</li>
+                <li class="like-list"><img src="./녹차.png" alt=" ">휘낭시에</li>
+              </ul>
+        </section>
+        <footer>
+          <address>
+            <h2>Contact</h2>
+              <ul>
+                <li class="contact-list">OOO-OOOO-OOOO</li>
+                <li class="contact-list">aOO@OOO.com</li>
+              </ul>
+          </address>
+        </footer>
+</body>
+</html>
